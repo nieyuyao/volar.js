@@ -1,4 +1,5 @@
 import * as vscode from 'vscode-languageserver/node';
+import type { ProposedFeatures } from 'vscode-languageserver/node'
 import { provider as httpFsProvider, listenEditorSettings } from './lib/fileSystemProviders/http';
 import { provider as nodeFsProvider } from './lib/fileSystemProviders/node';
 import { createServerBase } from './lib/server';
@@ -9,8 +10,9 @@ export * from './lib/project/simpleProject';
 export * from './lib/project/typescriptProject';
 export * from './lib/server';
 
-export function createConnection() {
-	return vscode.createConnection(vscode.ProposedFeatures.all);
+export function createConnection(options?: vscode.ConnectionStrategy | vscode.ConnectionOptions): ProposedFeatures.Connection {
+	const connection = vscode.createConnection(vscode.ProposedFeatures.all, options);
+	return connection;
 }
 
 export function createServer(connection: vscode.Connection) {

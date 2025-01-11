@@ -127,11 +127,11 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0
       vscode-languageserver:
-        specifier: ^9.0.1
-        version: 9.0.1
+        specifier: ^10.0.0-next.11
+        version: 10.0.0-next.11
       vscode-languageserver-protocol:
-        specifier: ^3.17.5
-        version: 3.17.5
+        specifier: ^3.17.6-next.11
+        version: 3.17.6-next.11
       vscode-languageserver-textdocument:
         specifier: ^1.0.11
         version: 1.0.12
@@ -149,8 +149,8 @@ importers:
         specifier: 2.4.11
         version: link:../language-core
       vscode-languageserver-protocol:
-        specifier: ^3.17.5
-        version: 3.17.5
+        specifier: ^3.17.6-next.11
+        version: 3.17.6-next.11
       vscode-languageserver-textdocument:
         specifier: ^1.0.11
         version: 1.0.12
@@ -3040,6 +3040,10 @@ packages:
     resolution: {integrity: sha512-C+r0eKJUIfiDIfwJhria30+TYWPtuHJXHtI7J0YlOmKAo7ogxP20T0zxB7HZQIFhIyvoBPwWskjxrvAtfjyZfA==}
     engines: {node: '>=14.0.0'}
 
+  vscode-jsonrpc@9.0.0-next.6:
+    resolution: {integrity: sha512-KCSvUNsFiVciG9iqjJKBZOd66CN3ZKohDlYRmoOi+pd8l15MFLZ8wRG4c+wuzePGba/8WcCG2TM+C/GVlvuaeA==}
+    engines: {node: '>=14.0.0'}
+
   vscode-languageclient@9.0.1:
     resolution: {integrity: sha512-JZiimVdvimEuHh5olxhxkht09m3JzUGwggb5eRUkzzJhZ2KjCN0nh55VfiED9oez9DyF8/fz1g1iBV3h+0Z2EA==}
     engines: {vscode: ^1.82.0}
@@ -3047,14 +3051,20 @@ packages:
   vscode-languageserver-protocol@3.17.5:
     resolution: {integrity: sha512-mb1bvRJN8SVznADSGWM9u/b07H7Ecg0I3OgXDuLdn307rl/J3A9YD6/eYOssqhecL27hK1IPZAsaqh00i/Jljg==}
 
+  vscode-languageserver-protocol@3.17.6-next.11:
+    resolution: {integrity: sha512-GeJxEp1TiLsp79f8WG5n10wLViXfgFKb99hU9K8m7KDWM95/QFEqWkm79f9LVm54tUK74I91a9EeiQLCS/FABQ==}
+
   vscode-languageserver-textdocument@1.0.12:
     resolution: {integrity: sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA==}
 
   vscode-languageserver-types@3.17.5:
     resolution: {integrity: sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg==}
 
-  vscode-languageserver@9.0.1:
-    resolution: {integrity: sha512-woByF3PDpkHFUreUa7Hos7+pUWdeWMXRd26+ZX2A8cFx6v/JPTtd4/uN0/jB6XQHYaOlHbio03NTHCqrgG5n7g==}
+  vscode-languageserver-types@3.17.6-next.5:
+    resolution: {integrity: sha512-QFmf3Yl1tCgUQfA77N9Me/LXldJXkIVypQbty2rJ1DNHQkC+iwvm4Z2tXg9czSwlhvv0pD4pbF5mT7WhAglolw==}
+
+  vscode-languageserver@10.0.0-next.11:
+    resolution: {integrity: sha512-cmobSrVDYhlh/t02vz/bV8nNpds8mus5HnILULae2iAvOjoaJPnTAp0jJWoYdUqTpIVzT9JV6JMKqLEvdqpeqg==}
     hasBin: true
 
   vscode-nls@5.2.0:
@@ -6127,6 +6137,8 @@ snapshots:
 
   vscode-jsonrpc@8.2.0: {}
 
+  vscode-jsonrpc@9.0.0-next.6: {}
+
   vscode-languageclient@9.0.1:
     dependencies:
       minimatch: 5.1.6
@@ -6138,13 +6150,20 @@ snapshots:
       vscode-jsonrpc: 8.2.0
       vscode-languageserver-types: 3.17.5
 
+  vscode-languageserver-protocol@3.17.6-next.11:
+    dependencies:
+      vscode-jsonrpc: 9.0.0-next.6
+      vscode-languageserver-types: 3.17.6-next.5
+
   vscode-languageserver-textdocument@1.0.12: {}
 
   vscode-languageserver-types@3.17.5: {}
 
-  vscode-languageserver@9.0.1:
+  vscode-languageserver-types@3.17.6-next.5: {}
+
+  vscode-languageserver@10.0.0-next.11:
     dependencies:
-      vscode-languageserver-protocol: 3.17.5
+      vscode-languageserver-protocol: 3.17.6-next.11
 
   vscode-nls@5.2.0: {}
 

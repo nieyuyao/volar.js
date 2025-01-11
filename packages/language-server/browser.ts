@@ -10,10 +10,10 @@ export * from './lib/project/simpleProject';
 export * from './lib/project/typescriptProject';
 export * from './lib/server';
 
-export function createConnection() {
+export function createConnection(options?: vscode.ConnectionStrategy | vscode.ConnectionOptions) {
 	const messageReader = new vscode.BrowserMessageReader(self);
 	const messageWriter = new vscode.BrowserMessageWriter(self);
-	const connection = vscode.createConnection(messageReader, messageWriter);
+	const connection = vscode.createConnection(messageReader, messageWriter, options);
 
 	return connection;
 }
